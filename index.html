@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Little Universe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>My Little Universe</h1>
+        <p>A collection of little things</p>
+    </header>
+
+    <nav class="filters">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="nature">Nature</button>
+        <button data-filter="Books and novels">Books and novels</button>
+        <button data-filter="The cartoon world">The cartoon world</button>
+    </nav>
+
+    <main class="gallery">
+        <figure class="gallery-item" data-category="nature">
+            <img src="https://images.pexels.com/photos/13343917/pexels-photo-13343917.jpeg"
+                 alt="Beautiful mountain lake">
+            <figcaption>Mountain Lake</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="nature">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800"
+                 alt="Lake surrounded by mountains">
+            <figcaption>Peaceful Nature</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="Books and novels">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYOLzQ8QhsFucoD64ywYS0d7zIS5Ikmf6Qk4jjJi66cvgfgHQ36A1-UzA&s=10"
+                 alt="Wings of Fire">
+            <figcaption>Wings of Fire</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="Books and novels">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfTaRSZ57ytWxdqllaxVSMPZAgW8zqlOgFTLLgP9ZIp6kpUGX7Xw1a0LCN&s=10"
+                 alt="the hindi novel">
+            <figcaption>The hindi lover</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="The cartoon world">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8sujgvl0OkzP5AD5BK6drIbB01ZctswgnFKBxToCN0BlA7A6MOl7cMuw&s=10"
+                 alt="Modern architectural building">
+            <figcaption>Carefree</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="The cartoon world">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRroz1uUTYeqIuMjRrVhkBT7TI65A-T4sesWlFKtwaXOyu_QSoBSG_deDc&s=10"
+                 alt="City buildings at night">
+            <figcaption>The Bestfriend</figcaption>
+        </figure>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="close" id="close" aria-label="Close image">&times;</button>
+        <button class="prev" id="prev" aria-label="Previous image">&#10094;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button class="next" id="next" aria-label="Next image">&#10095;</button>
+        <p id="image-caption"></p>
+    </div>
+
+    <footer>
+        <p>Created with HTML, CSS and JavaScript</p>
+    </footer>
+</body>
+</html>

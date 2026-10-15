@@ -1,0 +1,171 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Verdana, Geneva, Tahoma, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    padding: 35px 15px;
+    background: #243447;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 25px 12px;
+}
+
+.filters button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.filters button:hover,
+.filters button.active {
+    background: #243447;
+    color: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 12px #00000015;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00000025;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+    padding: 14px;
+    font-weight: bold;
+}
+
+.gallery-item.hidden {
+    display: none;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: #000000ed;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 70px;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.lightbox button {
+    position: absolute;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.close {
+    top: 15px;
+    right: 25px;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+#image-caption {
+    position: absolute;
+    bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #555;
+}
+
+@media (max-width: 800px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+
+    .lightbox {
+        padding: 50px 35px;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+    }
+}
